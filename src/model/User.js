@@ -1,0 +1,35 @@
+const sequelize = require("../database/database");
+const { INTEGER, STRING}=require('sequelize')
+module.exports.User=sequelize.define('User',{
+    user_id:{
+        type:INTEGER,
+        primaryKey:true,
+        autoIncrement:true
+    },
+    username:{
+        type:STRING,
+        allowNull:false,
+        unique:true,
+    },
+    email:{
+        allowNull:false,
+        unique:true,
+        type:STRING
+    },
+    password:{
+        allowNull:false,
+        type:STRING
+    },
+    full_name:{
+        type:STRING,
+        allowNull:false,
+    },
+    age:{
+        type:INTEGER,
+        allowNull:false
+    },
+    gender:{
+        type:STRING,
+        allowNull:false
+    }
+})

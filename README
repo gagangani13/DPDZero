@@ -1,0 +1,9 @@
+Hi,
+
+To run this code do following steps.
+
+1. create a .env file, inside that specify the values for DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD, DATABASE_HOST, JWT_SECRET, PORT to connect with MySQL workbench.
+
+2. "npm install"
+
+3. "npm start"

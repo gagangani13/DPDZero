@@ -1,0 +1,16 @@
+const express=require('express')
+const app=express()
+const cors=require('cors')
+const bodyParser=require('body-parser')
+const { router } = require('./router/router')
+const sequelize = require('./database/database')
+const { User } = require('./model/User')
+const { Data } = require('./model/Data')
+require('dotenv').config()
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors())
+app.use(router)
+User.hasMany(Data)
+Data.belongsTo(User,{foreignKey:'UserId'})
+sequelize.sync().then(()=>app.listen(process.env.PORT)).catch((error)=>console.error(error))

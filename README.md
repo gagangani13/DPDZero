@@ -40,12 +40,53 @@ This project implements a robust backend server that allows user registration an
 
 ## Project Use Guide
 
-![Registration](screenshots/register.jpg)
-![Token](screenshots/generate.jpg)
-![Store](screenshots/store.jpg)
-![Retrieve](screenshots/retrieve.jpg)
-![Update](screenshots/update.jpg)
-![Delete](screenshots/delete.jpg)
+### Register
+```Register
+Endpoint: POST /api/register,
+Request:{
+  "username": "example_user",
+  "email": "user@example.com",
+  "password": "secure_password123",
+  "full_name": "John Doe",
+  "age": 30,
+  "gender": "male"
+}  
+```
+### Token
+```Token
+Endpoint: POST /api/token
+Request:{
+  "username": "example_user",
+  "password": "secure_password123"
+}
+```
+### Store
+```Store
+Endpoint: POST /api/storeData
+Request Headers: Authorization: Bearer access_token
+Request Body:{
+  "key": "unique_key",
+  "value": "data_value"
+}
+```
+### Retrieve
+```Retrieve
+Endpoint: GET /api/retrieveData/{key}
+Request Headers: Authorization: Bearer access_token
+```
+### Update
+```Update
+Endpoint: PUT /api/updateData/{key}
+Request Headers: Authorization: Bearer access_token
+Request Body:{
+  "value": "data_value"
+}
+```
+### Delete
+```Delete
+Endpoint: DELETE /api/deleteData/{key}
+Request Headers: Authorization: Bearer access_token
+```
 
 ## Deployed Link
 The backend server is deployed at: https://dpd-zero-backend.onrender.com

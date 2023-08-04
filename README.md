@@ -38,7 +38,7 @@ This project implements a robust backend server that allows user registration an
 
 4. npm start
 
-# Project Use Guide
+## Project Use Guide
 
 ![Registration](screenshots/register.jpg)
 ![Token](screenshots/generate.jpg)
@@ -47,7 +47,7 @@ This project implements a robust backend server that allows user registration an
 ![Update](screenshots/update.jpg)
 ![Delete](screenshots/delete.jpg)
 
-# Deployed Link
+## Deployed Link
 The backend server is deployed at: https://dpd-zero-backend.onrender.com
 
 

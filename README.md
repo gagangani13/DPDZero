@@ -41,6 +41,7 @@ This project implements a robust backend server that allows user registration an
 ## Project Use Guide
 
 ### Register
+Register new user by using this.
 ```Register
 Endpoint: POST /api/register,
 Request:{
@@ -53,6 +54,7 @@ Request:{
 }  
 ```
 ### Token
+Once the user is registered, get the token by using this. 
 ```Token
 Endpoint: POST /api/token
 Request:{
@@ -61,6 +63,7 @@ Request:{
 }
 ```
 ### Store
+Whenever making CRUD operations on data, always use token you've got.
 ```Store
 Endpoint: POST /api/storeData
 Request Headers: Authorization: Bearer access_token
